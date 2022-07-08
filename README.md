@@ -6,7 +6,7 @@ Node , redis , docker simple to do list
 
 ```
 git clone https://github.com/pkalab/redis_project.git
-cd redis-project
+cd redis_project
 docker-compose up --build
 ```
 
@@ -18,6 +18,8 @@ open http://localhost:9001/
 docker-compose down
 ```
 
+Before accessing docker containers run docker-compose down
+
 # To access redis database
 
 ```
@@ -28,8 +30,9 @@ docker-compose down
 
 # To access app container
 
+
 ```
- cd redis-project
+ cd redis_project
  docker build -t app .
  docker run app
  docker exec -it app sh
