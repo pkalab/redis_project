@@ -27,13 +27,3 @@ Before accessing docker containers run docker-compose down
  docker run -d --name redis -p 127.0.0.1:${HOST_MACHINE_REDIS_PORT}:6379 redis
  docker exec -it redis sh
 ```
-
-# To access app container
-
-
-```
- cd redis_project
- docker build -t app .
- docker run app
- docker exec -it app sh
-```
