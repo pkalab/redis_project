@@ -23,7 +23,7 @@ Before accessing docker containers run docker-compose down
 # To access redis database
 
 ```
- cd redis-project
+ cd redis_project
  docker run -d --name redis -p 127.0.0.1:${HOST_MACHINE_REDIS_PORT}:6379 redis
  docker exec -it redis sh
 ```
