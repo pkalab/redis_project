@@ -1,0 +1,13 @@
+version: '3'
+services:
+  redis:
+    container_name: 'redis'
+    image: redis:latest
+    command: [ "redis-server", "--bind", "redis", "--port", "6379" ]
+    ports:
+      - "127.0.0.1:${HOST_MACHINE_REDIS_PORT}:6379"
+  node-app:
+    container_name: 'app'
+    build: .
+    ports:
+      - "9001:3000"
